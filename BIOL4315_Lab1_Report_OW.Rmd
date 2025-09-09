@@ -11,11 +11,13 @@ date: "2025-09-09"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### Library Loading
+### Library Loading (3pts)
 ```{r libraries, echo=FALSE}
 library(rmarkdown)
 library(knitr)
 ```
+
+# Primart Title Name of the partner (OceanneYW) (1pt)
 
 ## R Markdown
 
@@ -36,3 +38,16 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r install packages, eval=FALSE}
+install.packages("vegan")
+```
+
+This is a text chunk for loading ggplot2 and plot a scatter plot of speed vs dist from cars dataset
+```{r plot with ggplot2, echo=TRUE}
+p <- ggplot2::ggplot(data = cars, mapping = aes(x = speed, y = dist)) + geom_point(size=2, shape=23)
+```
+
+```{r show plot, echo=TRUE, eval=TRUE}
+p
+```
