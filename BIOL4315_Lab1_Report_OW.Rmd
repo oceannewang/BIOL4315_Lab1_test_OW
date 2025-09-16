@@ -1,5 +1,5 @@
 ---
-title: "BIOL4315_Lab 1"
+title: "BIOL4315_Lab 1" 
 subtitle: "Intro to Rmarkdown" 
 output: html_document
 # Add author and other tags
@@ -17,7 +17,7 @@ library(rmarkdown)
 library(knitr)
 ```
 
-# Primart Title Name of the partner (OceanneYW) (1pt)
+# Primary Title Name of the partner (OceanneYW) (1pt)
 
 ## R Markdown
 
@@ -45,9 +45,16 @@ install.packages("vegan")
 
 This is a text chunk for loading ggplot2 and plot a scatter plot of speed vs dist from cars dataset
 ```{r plot with ggplot2, echo=TRUE}
+library("ggplot2")
 p <- ggplot2::ggplot(data = cars, mapping = aes(x = speed, y = dist)) + geom_point(size=2, shape=23)
 ```
-
-```{r show plot, echo=TRUE, eval=TRUE}
+Show plot
+```{r show plot, echo=TRUE}
 p
+```
+```{bash, eval=false}
+docker pull --platform linux/amd64 nextgenusfs/funannotate
+
+conda activate sequali_env
+conda install sequali=version -c channel
 ```
